@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lebohang\\Desktop\\EmploeesData\\EmploeesData\\EmploeesData.csproj": {}
+    "C:\\Users\\Lebohang\\Documents\\GitHub\\Project2_CMPG323\\EmploeesData\\EmploeesData.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lebohang\\Desktop\\EmploeesData\\EmploeesData\\EmploeesData.csproj": {
+    "C:\\Users\\Lebohang\\Documents\\GitHub\\Project2_CMPG323\\EmploeesData\\EmploeesData.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lebohang\\Desktop\\EmploeesData\\EmploeesData\\EmploeesData.csproj",
+        "projectUniqueName": "C:\\Users\\Lebohang\\Documents\\GitHub\\Project2_CMPG323\\EmploeesData\\EmploeesData.csproj",
         "projectName": "EmploeesData",
-        "projectPath": "C:\\Users\\Lebohang\\Desktop\\EmploeesData\\EmploeesData\\EmploeesData.csproj",
+        "projectPath": "C:\\Users\\Lebohang\\Documents\\GitHub\\Project2_CMPG323\\EmploeesData\\EmploeesData.csproj",
         "packagesPath": "C:\\Users\\Lebohang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lebohang\\Desktop\\EmploeesData\\EmploeesData\\obj\\",
+        "outputPath": "C:\\Users\\Lebohang\\Documents\\GitHub\\Project2_CMPG323\\EmploeesData\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
