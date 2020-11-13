@@ -351,9 +351,6 @@ C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\bin\Debug\netco
 C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.csprojAssemblyReference.cache
 C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.AssemblyInfoInputs.cache
 C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.AssemblyInfo.cs
-C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.csproj.CoreCompileInputs.cache
-C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.RazorAssemblyInfo.cache
 C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.RazorAssemblyInfo.cs
 C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.TagHelpers.input.cache
@@ -424,3 +421,9 @@ C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netco
 C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\Razor\Views\Manager\Index.cshtml.g.cs
 C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\Razor\Views\Role\Index.cshtml.g.cs
 C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\Razor\Views\Role\Create.cshtml.g.cs
+C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\bin\Debug\netcoreapp3.1\Microsoft.SqlServer.Types.dll
+C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.Properties.Resources.resources
+C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.csproj.GenerateResource.cache
+C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.csproj.CoreCompileInputs.cache
+C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Lebohang\Documents\GitHub\Project2_CMPG323\EmploeesData\obj\Debug\netcoreapp3.1\EmploeesData.MvcApplicationPartsAssemblyInfo.cache

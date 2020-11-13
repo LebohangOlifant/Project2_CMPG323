@@ -1,0 +1,37 @@
+﻿
+@{
+        ViewData["Title"] = "Index";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        string[] TableHeaders = new string[] {"Employee Count"
+          ,"Performance Rating"
+          ,"Training Times Last Year"
+          ,"Years At Company"
+          ,"Years In Current Role"
+          ,"Years Since Last Promotion"
+          ,"Years With Current Manager"
+          ,"Employee Number"};
+}
+
+<div class="table">
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                @{
+                    foreach (var head in  TableHeaders){
+                        <th>
+                            @head
+                        </th>
+                    }
+                } 
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                
+            </td>
+        </tr>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
