@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lebohang\\Desktop\\CMPG323 Project 2\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj": {}
+    "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lebohang\\Desktop\\CMPG323 Project 2\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj": {
+    "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lebohang\\Desktop\\CMPG323 Project 2\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj",
         "projectName": "DimensionDataSystem",
-        "projectPath": "C:\\Users\\Lebohang\\Desktop\\CMPG323 Project 2\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj",
+        "projectPath": "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj",
         "packagesPath": "C:\\Users\\Lebohang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lebohang\\Desktop\\CMPG323 Project 2\\DimensionDataSystem\\DimensionDataSystem\\obj\\",
+        "outputPath": "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"
@@ -48,31 +48,29 @@
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.9, )"
+              "version": "[3.1.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[3.1.10, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
-              "version": "[3.1.9, )"
-            },
-            "Microsoft.SqlServer.Types": {
-              "target": "Package",
-              "version": "[14.0.1016.290, )"
+              "version": "[3.1.10, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
               "version": "[3.1.4, )"
-            },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.2, )"
             }
           },
           "imports": [

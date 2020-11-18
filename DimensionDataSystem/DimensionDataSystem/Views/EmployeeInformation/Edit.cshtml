@@ -1,0 +1,65 @@
+﻿@model DimensionDataSystem.Models.EmployeeInformation
+
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Edit</h1>
+
+<h4>EmployeeInformation</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="EmployeeId" />
+            <div class="form-group">
+                <label asp-for="Attrition" class="control-label"></label>
+                <input asp-for="Attrition" class="form-control" />
+                <span asp-validation-for="Attrition" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DistanceFromHome" class="control-label"></label>
+                <input asp-for="DistanceFromHome" class="form-control" />
+                <span asp-validation-for="DistanceFromHome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Education" class="control-label"></label>
+                <input asp-for="Education" class="form-control" />
+                <span asp-validation-for="Education" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="EducationField" class="control-label"></label>
+                <input asp-for="EducationField" class="form-control" />
+                <span asp-validation-for="EducationField" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Over18" class="control-label"></label>
+                <input asp-for="Over18" class="form-control" />
+                <span asp-validation-for="Over18" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="OverTime" class="control-label"></label>
+                <input asp-for="OverTime" class="form-control" />
+                <span asp-validation-for="OverTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WorkLifeBalance" class="control-label"></label>
+                <input asp-for="WorkLifeBalance" class="form-control" />
+                <span asp-validation-for="WorkLifeBalance" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
