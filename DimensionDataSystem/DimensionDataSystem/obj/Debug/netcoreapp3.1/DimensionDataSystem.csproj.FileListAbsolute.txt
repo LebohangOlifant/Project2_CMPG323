@@ -258,3 +258,10 @@ C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionD
 C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\JobInformation\Details.cshtml.g.cs
 C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\JobInformation\Edit.cshtml.g.cs
 C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\JobInformation\Index.cshtml.g.cs
+C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\Survey\Create.cshtml.g.cs
+C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\Survey\Delete.cshtml.g.cs
+C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\Survey\Details.cshtml.g.cs
+C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\Survey\Edit.cshtml.g.cs
+C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\Survey\Index.cshtml.g.cs
+C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\Role\Index.cshtml.g.cs
+C:\Users\Lebohang\Desktop\ASP.NET CORE MVC Final Project\FinalProject\DimensionDataSystem\DimensionDataSystem\obj\Debug\netcoreapp3.1\Razor\Views\Role\Create.cshtml.g.cs

@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DimensionDataSystem.Data;
 using DimensionDataSystem.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace DimensionDataSystem.Controllers
 {
@@ -18,13 +19,13 @@ namespace DimensionDataSystem.Controllers
         {
             _context = context;
         }
-
+        [Authorize(Roles = "Manager, Admin, Employee")]
         // GET: EmployeeHistory
         public async Task<IActionResult> Index()
         {
             return View(await _context.EmployeeHistory.ToListAsync());
         }
-
+        [Authorize(Roles = "Manager, Admin, Employee")]
         // GET: EmployeeHistory/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -42,7 +43,7 @@ namespace DimensionDataSystem.Controllers
 
             return View(employeeHistory);
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: EmployeeHistory/Create
         public IActionResult Create()
         {
@@ -64,7 +65,7 @@ namespace DimensionDataSystem.Controllers
             }
             return View(employeeHistory);
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: EmployeeHistory/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
@@ -115,7 +116,7 @@ namespace DimensionDataSystem.Controllers
             }
             return View(employeeHistory);
         }
-
+        [Authorize(Roles = "Admin")]
         // GET: EmployeeHistory/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
