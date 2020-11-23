@@ -21,9 +21,51 @@ namespace DimensionDataSystem.Controllers
         }
         [Authorize(Roles = "Manager")]
         // GET: Company
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
-            return View(await _context.Company.ToListAsync());
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["NumberSortParm"] = sortOrder == "Age" ? "number_desc" : "Age";
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["Getemployeesdetails"] = searchString;
+
+            var company = from s in _context.Company select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                company = company.Where(s => s.EmployeeCount.ToString().Contains(searchString) || s.StockOptionLevel.ToString().Contains(searchString) ||
+                s.BusinessTravel.Contains(searchString) || s.TotalWorkingYears.ToString().Contains(searchString)
+                || s.TrainingTimesLastYear.ToString().Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    company = company.OrderByDescending(s => s.BusinessTravel);
+                    break;
+                case "number_desc":
+                    company = company.OrderByDescending(s => s.StockOptionLevel);
+                    break;
+                case "Age":
+                    company = company.OrderBy(s => s.TotalWorkingYears);
+                    break;
+                default:
+                    company = company.OrderBy(s => s.TrainingTimesLastYear);
+                    break;
+            }
+
+
+            int pageSize = 5;
+            return View(await PaginatedList<Company>.CreatAsync(company.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
 
         [Authorize(Roles = "Manager")]

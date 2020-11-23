@@ -21,9 +21,12 @@ namespace DimensionDataSystem.Controllers
         }
         [Authorize(Roles = "Manager")]
         // GET: Survey
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pageNumber)
         {
-            return View(await _context.Survey.ToListAsync());
+            var employees = from s in _context.Survey select s;
+
+            int pageSize = 5;
+            return View(await PaginatedList<Survey>.CreatAsync(employees.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
         [Authorize(Roles = "Manager")]
         // GET: Survey/Details/5

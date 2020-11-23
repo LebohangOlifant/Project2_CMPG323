@@ -21,9 +21,32 @@ namespace DimensionDataSystem.Controllers
         }
         [Authorize(Roles = "Manager")]
         // GET: CompanyCost
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
-            return View(await _context.CompanyCost.ToListAsync());
+            ViewData["CurrentSort"] = sortOrder;
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["Getemployeesdetails"] = searchString;
+
+            var company = from s in _context.CompanyCost select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                company = company.Where(s => s.DailyRate.ToString().Contains(searchString) || s.HourlyRate.ToString().Contains(searchString) ||
+                s.MonthlyIncome.ToString().Contains(searchString) || s.MonthlyRate.ToString().Contains(searchString)
+                || s.PercentSalaryHike.ToString().Contains(searchString));
+            }
+
+            int pageSize = 5;
+            return View(await PaginatedList<CompanyCost>.CreatAsync(company.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
         [Authorize(Roles = "Manager")]
         // GET: CompanyCost/Details/5

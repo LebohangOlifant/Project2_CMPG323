@@ -21,9 +21,49 @@ namespace DimensionDataSystem.Controllers
         }
         [Authorize(Roles = "Manager, Admin, Employee")]
         // GET: EmployeeInformation
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
-            return View(await _context.EmployeeInformation.ToListAsync());
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["NumberSortParm"] = sortOrder == "Age" ? "number_desc" : "Age";
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["Getemployeesdetails"] = searchString;
+
+            var employees = from s in _context.EmployeeInformation select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                employees = employees.Where(s => s.Attrition.Contains(searchString) || s.Education.ToString().Contains(searchString) ||
+                s.Over18.Contains(searchString) || s.EducationField.Contains(searchString) || s.OverTime.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    employees = employees.OrderByDescending(s => s.EducationField);
+                    break;
+                case "number_desc":
+                    employees = employees.OrderByDescending(s => s.Education);
+                    break;
+                case "Age":
+                    employees = employees.OrderBy(s => s.WorkLifeBalance);
+                    break;
+                default:
+                    employees = employees.OrderBy(s => s.Attrition);
+                    break;
+            }
+
+            int pageSize = 5;
+            return View(await PaginatedList<EmployeeInformation>.CreatAsync(employees.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
         [Authorize(Roles = "Manager, Admin, Employee")]
         // GET: EmployeeInformation/Details/5

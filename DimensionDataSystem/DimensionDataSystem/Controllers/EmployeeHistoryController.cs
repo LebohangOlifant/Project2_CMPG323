@@ -21,9 +21,12 @@ namespace DimensionDataSystem.Controllers
         }
         [Authorize(Roles = "Manager, Admin, Employee")]
         // GET: EmployeeHistory
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int? pageNumber)
         {
-            return View(await _context.EmployeeHistory.ToListAsync());
+            var employees = from s in _context.EmployeeHistory select s;
+
+            int pageSize = 5;
+            return View(await PaginatedList<EmployeeHistory>.CreatAsync(employees.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
         [Authorize(Roles = "Manager, Admin, Employee")]
         // GET: EmployeeHistory/Details/5

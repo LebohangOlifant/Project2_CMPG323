@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj": {}
+    "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\Hosted Database\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj": {
+    "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\Hosted Database\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj",
+        "projectUniqueName": "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\Hosted Database\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj",
         "projectName": "DimensionDataSystem",
-        "projectPath": "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj",
+        "projectPath": "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\Hosted Database\\DimensionDataSystem\\DimensionDataSystem\\DimensionDataSystem.csproj",
         "packagesPath": "C:\\Users\\Lebohang\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\FinalProject\\DimensionDataSystem\\DimensionDataSystem\\obj\\",
+        "outputPath": "C:\\Users\\Lebohang\\Desktop\\ASP.NET CORE MVC Final Project\\Hosted Database\\DimensionDataSystem\\DimensionDataSystem\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

@@ -21,9 +21,50 @@ namespace DimensionDataSystem.Controllers
         }
         [Authorize(Roles = "Manager, Admin, Employee")]
         // GET: Employee
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
-            return View(await _context.Employee.ToListAsync());
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["NumberSortParm"] = sortOrder == "Age" ? "number_desc" : "Age";
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["Getemployeesdetails"] = searchString;
+
+            var employees = from s in _context.Employee select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                employees = employees.Where(s => s.EmployeeNumber.ToString().Contains(searchString) || s.Age.ToString().Contains(searchString) ||
+                s.Gender.Contains(searchString) || s.MaritalStatus.Contains(searchString) || s.Email.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    employees = employees.OrderByDescending(s => s.MaritalStatus);
+                    break;
+                case "number_desc":
+                    employees = employees.OrderByDescending(s => s.EmployeeNumber);
+                    break;
+                case "Age":
+                    employees = employees.OrderBy(s => s.Age);
+                    break;
+                default:
+                    employees = employees.OrderBy(s => s.Email);
+                    break;
+            }
+
+
+            int pageSize = 5;
+            return View(await PaginatedList<Employee>.CreatAsync(employees.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
         [Authorize(Roles = "Manager, Admin, Employee")]
         // GET: Employee/Details/5

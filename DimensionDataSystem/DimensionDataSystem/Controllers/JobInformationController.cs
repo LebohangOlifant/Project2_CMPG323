@@ -21,9 +21,49 @@ namespace DimensionDataSystem.Controllers
         }
         [Authorize(Roles = "Manager")]
         // GET: JobInformation
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string sortOrder, string currentFilter, string searchString, int? pageNumber)
         {
-            return View(await _context.JobInformation.ToListAsync());
+            ViewData["CurrentSort"] = sortOrder;
+            ViewData["NameSortParm"] = String.IsNullOrEmpty(sortOrder) ? "name_desc" : "";
+            ViewData["NumberSortParm"] = sortOrder == "Age" ? "number_desc" : "Age";
+
+            if (searchString != null)
+            {
+                pageNumber = 1;
+            }
+            else
+            {
+                searchString = currentFilter;
+            }
+
+            ViewData["Getemployeesdetails"] = searchString;
+
+            var employees = from s in _context.JobInformation select s;
+
+            if (!String.IsNullOrEmpty(searchString))
+            {
+                employees = employees.Where(s => s.Department.Contains(searchString) || s.JobInvolvement.ToString().Contains(searchString) ||
+                s.JobLevel.ToString().Contains(searchString) || s.JobRole.Contains(searchString));
+            }
+
+            switch (sortOrder)
+            {
+                case "name_desc":
+                    employees = employees.OrderByDescending(s => s.Department);
+                    break;
+                case "number_desc":
+                    employees = employees.OrderByDescending(s => s.JobInvolvement);
+                    break;
+                case "Age":
+                    employees = employees.OrderBy(s => s.JobLevel);
+                    break;
+                default:
+                    employees = employees.OrderBy(s => s.JobRole);
+                    break;
+            }
+
+            int pageSize = 5;
+            return View(await PaginatedList<JobInformation>.CreatAsync(employees.AsNoTracking(), pageNumber ?? 1, pageSize));
         }
         [Authorize(Roles = "Manager")]
         // GET: JobInformation/Details/5
